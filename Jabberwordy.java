@@ -1,0 +1,175 @@
+class Jabberwordy{
+  public Jabberwordy(){
+    
+  }
+
+  public static void getJabberwordyResponse(String input){
+        ArrayList<String> normalWords = new ArrayList<String>();
+        normalWords.add("above");
+        normalWords.add("across");
+        normalWords.add("add");
+        normalWords.add("adventure");
+        normalWords.add("also");
+        normalWords.add("are");
+        normalWords.add("bad");
+        normalWords.add("because");
+        normalWords.add("below");
+        normalWords.add("but");
+        normalWords.add("by");
+        normalWords.add("can");
+        normalWords.add("crazy");
+        normalWords.add("day");
+        normalWords.add("direction");
+        normalWords.add("for");
+        normalWords.add("from");
+        normalWords.add("funny");
+        normalWords.add("go");
+        normalWords.add("good");
+        normalWords.add("have");
+        normalWords.add("how");
+        normalWords.add("if");
+        normalWords.add("java");
+        normalWords.add("just");
+        normalWords.add("keep");
+        normalWords.add("most");
+        normalWords.add("move");
+        normalWords.add("need");
+        normalWords.add("no");
+        normalWords.add("other");
+        normalWords.add("people");
+        normalWords.add("program");
+        normalWords.add("same");
+        normalWords.add("some");
+        normalWords.add("speak");
+        normalWords.add("speech");
+        normalWords.add("strange");
+        normalWords.add("subtract");
+        normalWords.add("talk");
+        normalWords.add("text");
+        normalWords.add("them");
+        normalWords.add("then");
+        normalWords.add("there");
+        normalWords.add("they");
+        normalWords.add("think");
+        normalWords.add("this");
+        normalWords.add("way");
+        normalWords.add("what");
+        normalWords.add("where");
+        normalWords.add("who");
+        normalWords.add("why");
+        normalWords.add("with");
+        normalWords.add("word");
+        normalWords.add("yes");
+        normalWords.add("you");
+        
+        ArrayList<String> jabberWords = new ArrayList<String>();
+        jabberWords.add("allocution");
+        jabberWords.add("ancient");
+        jabberWords.add("antidisestablishmentarianism");
+        jabberWords.add("autonomy");
+        jabberWords.add("ballerina");
+        jabberWords.add("banana");
+        jabberWords.add("bankroll");
+        jabberWords.add("berserker");
+        jabberWords.add("birthplace");
+        jabberWords.add("blathering");
+        jabberWords.add("blister");
+        jabberWords.add("bouncy");
+        jabberWords.add("boutique");
+        jabberWords.add("candelabra");
+        jabberWords.add("cannibal");
+        jabberWords.add("capacitor");
+        jabberWords.add("catalyst");
+        jabberWords.add("chandelier");
+        jabberWords.add("chauffer");
+        jabberWords.add("circuit");
+        jabberWords.add("conundrum");
+        jabberWords.add("craven");
+        jabberWords.add("creepy");
+        jabberWords.add("crustaceous");
+        jabberWords.add("dance");
+        jabberWords.add("dangerous");
+        jabberWords.add("daring");
+        jabberWords.add("dastardly");
+        jabberWords.add("delude");
+        jabberWords.add("download");
+        jabberWords.add("dragon");
+        jabberWords.add("ego");
+        jabberWords.add("emphysema");
+        jabberWords.add("ephemeral");
+        jabberWords.add("etui");
+        jabberWords.add("evaluate");
+        jabberWords.add("feudal");
+        jabberWords.add("fiery");
+        jabberWords.add("flabbergasted");
+        jabberWords.add("flux");
+        jabberWords.add("forsooth");
+        jabberWords.add("frothing");
+        jabberWords.add("fudgesickle"); 
+        jabberWords.add("funky");
+        jabberWords.add("galloping");
+        jabberWords.add("ghostly");
+        jabberWords.add("glassy");
+        jabberWords.add("gold");
+        jabberWords.add("gooseneck");
+        jabberWords.add("grizzly");
+        jabberWords.add("grok");
+        jabberWords.add("grommet");
+        jabberWords.add("hashing");
+        jabberWords.add("hibernation");
+        jabberWords.add("Hogwarts");
+        jabberWords.add("impure,");
+        jabberWords.add("incandescent");
+        jabberWords.add("incubus");
+        jabberWords.add("jump");
+        jabberWords.add("limerick");
+        jabberWords.add("melodrama");
+        jabberWords.add("monger");
+        jabberWords.add("monotone");
+        jabberWords.add("muscle");
+        jabberWords.add("obelisk");
+        jabberWords.add("omnivore");
+        jabberWords.add("ostensibly");
+        jabberWords.add("pantaloons");
+        jabberWords.add("papaya");
+        jabberWords.add("parasite");
+        jabberWords.add("patronus");
+        jabberWords.add("pectoral");
+        jabberWords.add("plebian");
+        jabberWords.add("portcullis");
+        jabberWords.add("punch");
+        jabberWords.add("reagent");
+        jabberWords.add("referee");
+        jabberWords.add("salamander");
+        jabberWords.add("savage");
+        jabberWords.add("scalawag");
+        jabberWords.add("serendipitous");
+        jabberWords.add("seventeen");
+        jabberWords.add("shameful");
+        jabberWords.add("shanty");
+        jabberWords.add("slither");
+        jabberWords.add("sonic");
+        jabberWords.add("spaceship");
+        jabberWords.add("spongey");
+        jabberWords.add("square");
+        jabberWords.add("succubus");
+        jabberWords.add("tango");
+        jabberWords.add("tape");
+        jabberWords.add("toaster");
+        jabberWords.add("toothy");
+        jabberWords.add("twine");
+        jabberWords.add("volcano");
+
+        //For each parsed word, if found in normalWords, replace with jabberword. While loop.
+        //ONLY use newInput!
+        
+        for(String word : normalWords){
+            Random r = new Random();
+            int index = r.nextInt(jabberWords.size() - 1);
+            String randomJabber = jabberWords.get(index);
+            while (input.contains(word)){
+                input = input.replace(word, randomJabber);
+            }
+        }
+        System.out.println(input);
+}
